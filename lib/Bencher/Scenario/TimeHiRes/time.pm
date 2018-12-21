@@ -1,4 +1,4 @@
-package Bencher::Scenario::TimeHiRes::time_vs_tv_interval;
+package Bencher::Scenario::TimeHiRes::time;
 
 # DATE
 # VERSION
@@ -7,12 +7,16 @@ use strict;
 use warnings;
 
 our $scenario = {
-    summary => 'Benchmark time() vs tv_interval()',
+    summary => 'Benchmark getting current time',
     modules => {
     },
     participants => [
         {
             fcall_template => 'Time::HiRes::time',
+        },
+        {
+            name => 'CORE::time',
+            code_template => 'time()',
         },
         {
             fcall_template => 'Time::HiRes::tv_interval',

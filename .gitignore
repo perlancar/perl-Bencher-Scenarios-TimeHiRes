@@ -2,3 +2,4 @@ Bencher-Scenarios-TimeHiRes-*
 .build
 *~
 nytprof*
+.DS_Store
